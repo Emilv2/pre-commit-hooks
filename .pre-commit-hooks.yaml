@@ -1,0 +1,8 @@
+-   id: configparser
+    name: configparser
+    entry: check-config
+    language: python
+    'types': ['ini']
+    args: []
+    require_serial: false
+    additional_dependencies: []
