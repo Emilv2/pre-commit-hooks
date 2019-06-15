@@ -12,13 +12,13 @@ from typing import Sequence
 
 def main(argv=None):  # type: (Optional[Sequence[str]]) -> int
     parser = argparse.ArgumentParser()
-    parser.add_argument('filenames', nargs='*', help='XML filenames to check.')
+    parser.add_argument('filenames', nargs='*', help='ini filenames to check.')
     args = parser.parse_args(argv)
 
     retval = 0
     for filename in args.filenames:
         try:
-            with io.open(filename, 'rb') as ini_file:
+            with io.open(filename, 'r') as ini_file:
                 configparser.RawConfigParser().read_file(ini_file)
         except configparser.ParsingError as exc:
             print('{}: Failed to ini parse ({})'.format(filename, exc))
