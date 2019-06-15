@@ -1,5 +1,6 @@
--   id: configparser
-    name: configparser
+-   id: check-config
+    name: check ini files
+    description: This hook checks ini files for parseable syntax.
     entry: check-config
     language: python
     'types': ['ini']
