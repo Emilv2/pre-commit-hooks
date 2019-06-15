@@ -20,7 +20,7 @@ def main(argv=None):  # type: (Optional[Sequence[str]]) -> int
         try:
             with io.open(filename, 'r') as ini_file:
                 configparser.RawConfigParser().read_file(ini_file)
-        except configparser.ParsingError as exc:
+        except Exception as exc:
             print('{}: Failed to ini parse ({})'.format(filename, exc))
             retval = 1
     return retval
