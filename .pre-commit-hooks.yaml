@@ -8,4 +8,11 @@
   args: []
   require_serial: false
   additional_dependencies: []
+- id: vsg
+  name: vhdl-style-guide
+  description: Coding style enforcement for VHDL.
+  entry: vsg
+  language: python
+  'types': ['vhdl']
+  args: ['--fix -c vsg_conf.yml -f']
 ...
